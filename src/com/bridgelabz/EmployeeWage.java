@@ -7,17 +7,21 @@ public class EmployeeWage {
     public static void main(String[] args) {
         int isPresent = (int) (Math.random()*10)%3;
         int dailyWage = 0;
-        if(isPresent == 1){
-            System.out.println("Employee is Present.");
-            dailyWage = WAGE_PER_HOUR * FULL_TIME_HOUR;
+        switch (isPresent){
+            case 0:{
+                System.out.println("Employee is absent.");
+                System.out.println("Daily wage is " + dailyWage);
+            }break;
+            case 1:{
+                System.out.println("Employee is Full time present.");
+                dailyWage = WAGE_PER_HOUR * FULL_TIME_HOUR;
+                System.out.println("Daily wage is " + dailyWage);
+            }break;
+            case 2:{
+                System.out.println("Employee is Part time present.");
+                dailyWage = WAGE_PER_HOUR * PART_TIME_HOUR;
+                System.out.println("Daily wage is " + dailyWage);
+            }break;
         }
-        else if(isPresent == 2){
-            System.out.println("Employee is Part time.");
-            dailyWage = WAGE_PER_HOUR * PART_TIME_HOUR;
-        }
-        else {
-            System.out.println("Employee is Absent.");
-        }
-        System.out.println("Daily Wage is " + dailyWage);
     }
 }
