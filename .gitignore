@@ -4,7 +4,7 @@ out/
 !**/src/test/**/out/
 
 ### INTELLIJ IDEA ###
-.iml
+*.iml
 .idea
 
 ### Eclipse ###
